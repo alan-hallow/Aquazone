@@ -1,4 +1,5 @@
 <?php
+require_once '../../includes/dbh-inc.php';  // Include the database connection
 
 if (isset($_POST["submit"])) {
     // Retrieve product details from form
@@ -7,12 +8,10 @@ if (isset($_POST["submit"])) {
     $pprice = $_POST["price"];
     $pspecification = $_POST["specification"];
 
-    require_once '../../includes/dbh-inc.php';  // Include the database connection
-
     // Handle image uploads for all four images
     $allowed = array('jpg', 'jpeg', 'png');
 
-    $fileDestinations = array();  // Array to store uploaded image file paths
+    $fileDestinations = array();  // Array to store uploaded image filenames
 
     for ($i = 1; $i <= 4; $i++) {
         $file = $_FILES['image' . $i];  // Get the image file from form
@@ -28,11 +27,11 @@ if (isset($_POST["submit"])) {
         if (in_array($fileActualExt, $allowed)) {
             if ($fileError === 0) {
                 // Check if the file size is within limits
-                if ($fileSize < 1000000) {
+                if ($fileSize < 10000000) {
                     $fileNameNew = uniqid('', true) . "." . $fileActualExt;
                     $fileDestination = '../../images/' . $fileNameNew;
                     move_uploaded_file($fileTmpName, $fileDestination);
-                    $fileDestinations[] = $fileDestination;  // Store uploaded image path
+                    $fileDestinations[] = $fileNameNew;  // Store uploaded image filename
                 } else {
                     echo "The file $i is too big<br>";
                 }
@@ -46,7 +45,7 @@ if (isset($_POST["submit"])) {
 
     // Insert data into the database
     if (emptyproducts($pname, $pdescription, $pprice, $pspecification, $fileDestinations) !== false) {
-        header("location: ../productupload.php?error=emptyinput");
+        header("location: ../productupload-admin.php?error=emptyinput");
         exit();
     }
 
@@ -54,7 +53,7 @@ if (isset($_POST["submit"])) {
     createProduct($conn, $pname, $pdescription, $pprice, $pspecification, $fileDestinations);
 } else {
     // Redirect if the form was not submitted
-    header("location: ../productupload.php");
+    header("location: ../productupload-admin.php");
     exit();
 }
 
@@ -76,7 +75,7 @@ function createProduct($conn, $pname, $pdescription, $pprice, $pspecification, $
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         // Redirect with an error message if SQL preparation fails
-        header("location: ../productupload.php?error=sqlerror");
+        header("location: ../productupload-admin.php?error=sqlerror");
         exit();
     } else {
         // Bind parameters and execute the statement
@@ -84,7 +83,8 @@ function createProduct($conn, $pname, $pdescription, $pprice, $pspecification, $
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
         // Redirect with a success message after successful insertion
-        header("location: ../productupload.php?uploadsuccess");
+        header("location: ../productstable-admin.php?uploadsuccess");
         exit();
     }
 }
+?>

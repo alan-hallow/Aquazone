@@ -4,13 +4,24 @@
 
 
 :root{
-    --backgroundcolor: #DAC0A3;
-    --secondarybackgroundcolor: #EADBC8;
-    --buttoncolorprimary: #4682A9;
-    --buttoncolorsecondary: #7EAA92;
-    --inputboxcolor: #F8F0E5;
-    --buttonprimaryhover: #9ED2BE;
-    --buttonsecondaryhover: #9ED2BE;
+    --backgroundcolor: #070707;
+    --secondarybackgroundcolor: #1a1a1a;
+
+    --inputboxcolor: #2c2c2c;
+
+    --textcolorprimary: #fff;
+    --textcolorsecondary: #000;
+    --textcolortertiary: #171717;
+
+    --buttoncolorprimary: #4cd964;
+    --buttoncolorsecondary: #ff3b30;
+    --buttonprimaryhover: #007aff;
+    --buttonsecondaryhover: #4cd964;
+
+
+    --borderradiusprimary: 10px;
+    --borderradiussecondary: 20px;
+    --borderradiustertiary: 10px;
 }
 
 body{
@@ -20,30 +31,64 @@ body{
     text-align: left;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin: 30px 30px;
 }
+
+.allproductsbtn{
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    height: 50px;
+    width: 200px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: auto;
+    margin-left: auto;
+    font-family: 'Poppins', sans-serif;
+}
+.allproductsbutton{
+    height: 50px;
+    width: 200px;
+    background-color: #4cd964;
+    border-radius: var(--borderradiusprimary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.allproductsbtntext{
+    text-decoration: none;
+    color: var(--textcolorprimary);
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
 .addproductstitle{
     text-align: center;
     font-size: 50px;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    color: #000;
+    color: var(--textcolorprimary);
 }
+
+
 .container{
 	background-color: var(--secondarybackgroundcolor);
-	border-radius: 40px;
+	border-radius: var(--borderradiustertiary);
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	padding: 30px 70px 70px 40px;
-    width: 50%;
-    color: #000;
+    width: 80%;
+    color: var(--textcolorsecondary);
+    margin-top: 50px;
 }
 .form-control{
 	padding-bottom: 20px;
 	position: relative;
-    margin: 30px 20px;
+    margin: 10px 20px;
 }
 .addimages{
     display: grid;
@@ -55,12 +100,12 @@ body{
 }
 #addimage{
     background-color: var(--inputboxcolor);
-    height: 150px;
+    height: 50px;
     width: 100%;
-    border-radius: 40px;
-    color: rgb(73, 73, 73);
+    border-radius: var(--borderradiussecondary);
+    color: var(--textcolortertiary);
     text-align: center;
-    padding-top: 50%;
+    padding-top: 30px;
 
 }
 .add-images:nth-child(1){
@@ -75,13 +120,15 @@ body{
 .add-images:nth-child(4){
     grid-area: 2 / 2 / 3 / 3;
 }
+
 .form-control label {
 	display: inline-block;
 	margin-bottom: 15px;
+    color: var(--textcolorprimary);
 }
 
 .form-control input {
-	border-radius: 20px;
+	border-radius: var(--borderradiussecondary);
 	display: block;
     border: none;
     height: 50px;
@@ -91,9 +138,10 @@ body{
     font-size: 20px;
 	width: 100%;
     padding: 15px;
+    color: var(--textcolorprimary);
 }
 .form-control textarea {
-	border-radius: 20px;
+	border-radius: var(--borderradiussecondary);
 	display: block;
     border: none;
 	font-family: inherit;
@@ -102,68 +150,76 @@ body{
 	padding: 15px;
 	width: 100%;
     resize: none;
+    color: var(--textcolorprimary);
 }
 .form-control i {
 	visibility: hidden;
 	position: relative;
 }
-
-.submitbuttons{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    margin-left: 30px;
-
-}
-.submitbutton {
-	background-color: var(--buttoncolorprimary);
-	border-radius: 15px;
-	color: #fff;
-	display: block;
-	font-family: inherit;
-	font-size: 25px;
-	padding: 10px;
-	margin-top: 20px;
-	width: 100%;
-    height: 50px;
-    border: none;
-    transition: .5s;
-}
-.submitbutton:hover{
-    background-color: var(--buttonprimaryhover);
-}
 .title{
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
 }
+
+.submitbuttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 0 0 30px;
+	padding: 10px;
+
+}
 .clearall{
     background-color: var(--buttoncolorsecondary);
-	border-radius: 15px;
-	color: #fff;
-	display: block;
+	border-radius: var(--borderradiusprimary);
+	color: var(--textcolorprimary);
+	display: flex;
+    align-items: center;
+    justify-content: center;
 	font-family: inherit;
 	font-size: 25px;
-	padding: 10px;
-	margin-top: 20px;
 	width: 100%;
     height: 50px;
     border: none;
     transition: .5s;
 }
 .clearall:hover{
-    background-color: var(--buttonsecondaryhover);
+    opacity: .8;
+}
+.submitbutton {
+	background-color: var(--buttoncolorprimary);
+	border-radius: var(--borderradiusprimary);
+	color: var(--textcolorprimary);
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	font-family: inherit;
+	font-size: 25px;
+	width: 100%;
+    height: 50px;
+    border: none;
+    transition: .5s;
+}
+.submitbutton:hover{
+    opacity: .8;
 }
 
+
+
+
+
 .errors{
-	color: white;
+	color: var(--textcolorsecondary);
 	height: 50px;
 	width: 400px;
-	background-color: #0C356A;
+	background-color: #ffffff;
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	font-size: 18px;
-	border-radius: 10px;
+	border-radius: var(--borderradiusprimary);
 	text-align: left;
 	padding-left: 20px;
 	display: flex;
@@ -173,13 +229,10 @@ body{
 }
 @media only screen and (max-width: 600px) {
     .container{
-        background-color: var(--secondarybackgroundcolor);
-        border-radius: 40px;
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        padding: 30px 70px 70px 40px;
-        width: 100%;
+        width: 70%;
         color: #000;
     }
     .addimages{
@@ -191,11 +244,8 @@ body{
         font-size: 10px;
     }
     #addimage{
-        background-color: var(--inputboxcolor);
         height: 50px;
         width: 100%;
-        border-radius: 40px;
-        color: rgb(73, 73, 73);
         text-align: center;
         padding-top: 30px;
     

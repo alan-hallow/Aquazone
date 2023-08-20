@@ -4,7 +4,7 @@
 ?>
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <title>header</title>
@@ -22,7 +22,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Makasar&display=swap" rel="stylesheet">
 
     </head>
-    <body>
+    <body> -->
 
         <div id="myNav" class="overlay">
             <button class="btnclose" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></button>
@@ -71,6 +71,6 @@
         </div>
 
         <script src="js/headerjs.js"></script>
-        
+<!--         
     </body>
-</html>
+</html> -->

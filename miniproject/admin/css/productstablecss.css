@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+body{
+    background-color: rgb(27, 27, 27);
+
+}
+.title{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10px;
+    position: relative;
+    color: white;
+}
+
+.addproducts{
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    height: 50px;
+    width: 200px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    font-family: 'Poppins', sans-serif;
+}
+.addproductsbutton{
+    height: 50px;
+    width: 200px;
+    background-color: #4cd964;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addproductstext{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.button{
+    height: 100%;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+.btndelete{
+    background-color: #ff3b30;
+    color: #fff;
+}
+
+.table {
+    border-collapse: collapse;
+    margin: 25px 20px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.356);
+}
+.table thead tr {
+    background-color: transparent;
+    color: #ffffff;
+    text-align: left;
+}
+.table th,
+.table td {
+    padding: 20px 15px;
+    color: white;
+}
+th{
+    background-color: #000;
+}
+.table tbody tr {
+    border-bottom: none;
+}
+.table tbody tr:nth-of-type(odd) {
+    background-color: hsla(0, 0%, 0%, 0);
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: hsla(0, 0%, 0%, 0.3);
+}
+
+.table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}

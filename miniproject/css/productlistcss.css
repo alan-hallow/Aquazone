@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Yeseva+One&display=swap');
+
+
+body{
+  background-color: #e8e8e8;
+  overflow-x: hidden;
+}
+
+
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  background-color: rgba(10, 10, 10, 0.785);
+  backdrop-filter: blur(20px);
+  overflow-y: hidden;
+  overflow-x: hidden;
+  transition: height 1s ease-in-out;
+
+}
+
+.overlay-content {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: fit-content;
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+
+.overlay a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 66px;
+  color: #ffffff;
+  display: block;
+  line-height: 90%;
+  text-align: start;
+  transition: .5s;
+  font-family: 'Ibarra Real Nova', serif;
+
+}
+
+.overlay-content:hover > .links {
+  opacity: 0.1;
+  filter: blur(4px);
+}
+
+.overlay-content:hover > .links:hover {
+  opacity: 1; 
+  filter: blur(0px);
+}
+
+
+.overlay a:hover {
+  transition: .5s;
+  color: white;
+  scale: 1.1;
+}
+
+
+
+.overlay .btnclose {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 15px;
+  transition: 1s;
+  font-size: 2em;
+  color: white;
+  height: 60px;
+  aspect-ratio: 1/1;
+  border-radius: 100px;
+  border:none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
+  
+}
+.btnclose:active{
+  font-size: 1em;
+  transition: .5s;
+}
+
+
+@media screen and (max-height: 250px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .btnclose {
+  font-size: 40px;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+  .header{
+    font-size: 10px;
+  }
+}
+
+
+.header{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  z-index: 10;
+  background-color: #182747;
+  backdrop-filter: blur(10px);
+  place-items: center;
+  top: 0px;
+  left: 0px;
+}
+
+
+.aquazone-logo{
+  font-size: 2em;
+  grid-column: 1 / 2;
+  font-family: 'Yeseva One', cursive;
+  word-spacing: -30px;
+  transform: rotate(-3deg) translateY(-2px);
+  cursor: pointer;
+  transition: .5s;
+  justify-self: start;
+  padding-left: 40px;
+
+}
+
+.aquazone-logo:hover{
+
+  transform: rotate(0deg) scale(1.3) translateX(10px) translateY(0px);
+  transition: .5s;
+}
+.pagename{
+  font-size: 2em;
+  grid-column: 2 / 3;
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+
+.btnopen{
+  border-radius: 100px;
+  grid-column: 3 / 4;
+  transition: 1s;
+  font-size: 2em;
+  color: white;
+  justify-self: end;
+  text-align: center;
+  height: 60px;
+  aspect-ratio: 1/1;
+  border-radius: 100px;
+  border:none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+}
+
+button:active{
+  font-size: 1em;
+  transition: .5s;
+}
+
+
+
+
+
+#menu-background-pattern {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 5%, 
+    transparent 5%
+  );
+  background-position: 0% 0%;
+  background-size: 12vmin 12vmin;
+  height: 100vh;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  transition: opacity 800ms ease, 
+    background-size 800ms ease,
+    background-position 800ms ease;
+  width: 100vw;
+  z-index: -1;
+}
+
+
+
+
+.overlay[data-active-index="0"] > #menu-background-pattern {
+  background-position: 0% -16%;
+}
+
+.overlay[data-active-index="1"] > #menu-background-pattern {
+  background-position: 0% -32%;
+}
+
+.overlay[data-active-index="2"] > #menu-background-pattern {
+  background-position: 0% -49%;
+}
+
+.overlay[data-active-index="3"] > #menu-background-pattern {
+  background-position: 0% -65%;
+}
+
+.overlay[data-active-index="4"] > #menu-background-pattern {
+  background-position: 0% -83%;
+}
+
+.overlay[data-active-index="5"] > #menu-background-pattern {
+  background-position: 0% -100%;
+}
+  
+
+
+.overlay-content:hover ~ #menu-background-pattern {
+  background-size: 11vmin 11vmin;
+  opacity: 0.5;
+  
+}
+
+
+ 
+
+.intro{
+  position: relative;
+  height: 100vh;
+  color: #27374D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+
+}
+#intromain{
+  font-family: 'Merriweather', serif;
+}
+
+#introsub{
+  font-family: 'Roboto Mono', monospace;
+  padding: 0 20%;
+}
+
+
+
+.container{
+  background-color: #C84B31;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap:30px;
+  padding: 10% 0%;
+  border-radius: 50px;
+  height: 100%;
+
+}
+
+
+
+.items{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  transition: 1s ease-out;
+  padding: 0 17%;
+  height: 460px;
+  width: 250px;
+  box-shadow: rgba(0, 0, 0, 0.50) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: #435B66;
+  border-radius: 30px;
+  padding: 10px 50px;
+
+}
+.items:nth-child(3n-2){
+transform: translateX(100%)  scale(0.8);
+justify-self: end;
+}
+.items:nth-child(3n-1){
+transform: translateY(0%)  scale(0.8);
+justify-self: center;
+}
+.items:nth-child(3n){
+transform: translateX(-100%)  scale(0.8);
+justify-self: start;
+}
+.image{
+  height: 300px;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  border-radius: 30px;
+  transition: 1s;
+  cursor: pointer;
+  position: relative;
+}
+
+.image:hover{
+  transform: scale(1.05);
+  transition:.5s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.photo-on-display{
+  height: 300px;
+  aspect-ratio: 1/1;
+  border-radius: 30px;
+  z-index: -1;
+  position: absolute;
+}
+.photo-on-display::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px; /* Adjust the width of the gradient overlay */
+  height: 100px; /* Adjust the height of the gradient overlay */
+  background: linear-gradient(to top left, rgba(0, 0, 0, 0), rgb(255, 255, 255));
+  pointer-events: none;
+}
+.text{
+  height: 100px;
+  width: 300px;
+  background-color: #652519;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.items.show {
+  transform: translateY(0px) scale(1);
+}
+
+.ptext{
+  text-align: left;
+  font-size: 30px;
+  margin-left: 20px;
+  line-height: 25px;
+  font-family: 'Oswald', sans-serif;
+  margin-top: 10px;
+  color: white;
+  transition: 1s;
+}
+.ptext:hover{
+  color: #a0d9f4;
+}
+.pprice{
+  text-align: right;
+  font-size: 3rem;
+  font-family: 'Oswald', sans-serif;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-top: 160px;
+  padding-right: 20px;
+  z-index: 1;
+  position: relative;
+  
+
+}
+
+
+@media only screen and (max-width: 800px) {
+
+  .container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  }
+  .items{
+    margin: 0 10%;
+  }
+  .items:nth-child(3n-2){
+    transform: translateY(10%)  scale(0.8);
+    justify-self: end;
+    }
+    .items:nth-child(3n-1){
+    transform: translateY(10%)  scale(0.8);
+    justify-self: center;
+    }
+    .items:nth-child(3n){
+    transform: translateY(10%)   scale(0.8);
+    justify-self: start;
+    }
+
+    .items.show {
+      transform: translateY(0) translateX(0) scale(1);
+    }
+
+  .intro{
+    position: relative;
+    height: 100vh;
+    color: #27374D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 70%;
+
+  }
+  #intromain{
+      font-family: 'Merriweather', serif;
+  }
+
+  #introsub{
+      font-family: 'Roboto Mono', monospace;
+      padding: 0 5%;
+  }
+
+}
