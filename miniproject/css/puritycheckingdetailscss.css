@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    background-color: #141414;
+    font-family: 'Poppins', sans-serif;
+}
+
+.heading{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 50px;
+}
+
+.locations{
+    color: white;
+    font-size: 30px;
+    text-align: left;
+    padding: 50px 20%;
+    text-align: center;
+}
+
+.addresslab{
+    font-size: 35px;
+    font-weight: 1000;
+    text-transform: capitalize;
+}
+
+.location-1{
+    padding: 20px 0;
+    text-align: left;
+}
+
+
+.adddate{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.addtime{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.book{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    padding-bottom: 100px;
+}
+.submitbutton{
+    background-color: #007aff;
+    border: none;
+    height: 50px;
+    width: 500px;
+    color: white;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+input{
+    margin: 10px 0;
+}
+
+input[type="date"] {
+    appearance: none;
+    box-sizing: border-box;
+    border: none;
+    width: 400px;
+    color: white;
+    background: #303030;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 8px;
+    ::-webkit-datetime-edit-text { padding: 0 2rem; }
+    ::-webkit-datetime-edit-month-field { text-transform: uppercase; }
+    ::-webkit-datetime-edit-day-field { text-transform: uppercase; }
+    ::-webkit-datetime-edit-year-field { text-transform: uppercase; }
+    ::-webkit-inner-spin-button { display: none; }
+    ::-webkit-calendar-picker-indicator { background: transparent;}
+}
+
+input[type="time"] {
+    appearance: none;
+    box-sizing: border-box;
+    border: none;
+    color: white;
+    width: 400px;
+    background: #303030;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 8px;
+    ::-webkit-datetime-edit-text { padding: 0 2rem; }
+    ::-webkit-datetime-edit-month-field { text-transform: uppercase; }
+    ::-webkit-datetime-edit-day-field { text-transform: uppercase; }
+    ::-webkit-datetime-edit-year-field { text-transform: uppercase; }
+    ::-webkit-inner-spin-button { display: none; }
+    ::-webkit-calendar-picker-indicator { background: transparent;}
+}
+
+.errors{
+    position: fixed;
+    height: 50px;
+    width: 400px;
+    bottom: 4px;
+    right: 4px;
+    border-radius: 6px;
+    background-color: #5856d6;
+    color: white;
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+    animation: fade-in 3s linear;
+	font-size: 18px;
+	text-align: left;
+	padding-left: 20px;
+	display: flex;
+	align-items: center;
+	margin: 20px;
+
+}
+
+@keyframes fade-in {
+    5% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    95% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

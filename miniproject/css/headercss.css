@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Yeseva+One&display=swap');
 
-
-body{
-  background-color: lightgoldenrodyellow;
+body {
+  margin: 0;
   overflow-x: hidden;
 }
-
-
 
 .overlay {
   height: 0%;
@@ -17,10 +14,8 @@ body{
   left: 0;
   background-color: rgba(10, 10, 10, 0.874);
   backdrop-filter: blur(20px);
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: height .5s ease-in-out;
-
 }
 
 .overlay-content {
@@ -30,9 +25,7 @@ body{
   width: fit-content;
   text-align: center;
   margin-top: 20px;
-
 }
-
 
 .overlay .links {
   padding: 10px;
@@ -44,7 +37,6 @@ body{
   text-align: start;
   transition: .5s;
   font-family: 'Ibarra Real Nova', serif;
-
 }
 
 .overlay-content:hover > .links {
@@ -53,18 +45,15 @@ body{
 }
 
 .overlay-content:hover > .links:hover {
-  opacity: 1; 
+  opacity: 1;
   filter: blur(0px);
 }
-
 
 .overlay .links:hover {
   transition: .5s;
   color: white;
   scale: 1.1;
 }
-
-
 
 .overlay .btnclose {
   position: absolute;
@@ -77,18 +66,18 @@ body{
   height: 60px;
   aspect-ratio: 1/1;
   border-radius: 100px;
-  border:none;
+  border: none;
   background-color: transparent;
   cursor: pointer;
   text-align: center;
-  
 }
-.btnclose:active{
+
+.btnclose:active {
   font-size: 1em;
   transition: .5s;
 }
 
-.account{
+.account {
   display: flex;
   flex-direction: column;
   color: white;
@@ -97,7 +86,6 @@ body{
   right: 0;
   position: absolute;
   padding: 80px 40px;
-
 }
 
 .account .login {
@@ -111,45 +99,42 @@ body{
   font-family: 'Ibarra Real Nova', serif;
   text-align: right;
   margin: 20px;
-
 }
 
-
-.header{
+.header {
+  overflow-y: hidden;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  position: absolute;
   height: 80px;
+  max-height: 80px;
   width: 100%;
   z-index: 10;
-  background-color: #0f0f0fe0;
+  background-color: #0f0f0faf;
   backdrop-filter: blur(10px);
   place-items: center;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
+  position: fixed;
 }
 
-
-.aquazone-logo{
+.aquazone-logo {
   font-size: 2em;
   grid-column: 1 / 2;
   font-family: 'Yeseva One', cursive;
   word-spacing: -30px;
-  transform: rotate(-3deg) translateY(-2px);
+  transform: rotate(0deg) translateX(10px) translateY(0px);
   cursor: pointer;
   transition: .5s;
   justify-self: start;
-  padding-left: 40px;
-
 }
 
-.aquazone-logo:hover{
-
-  transform: rotate(0deg) scale(1.3) translateX(10px) translateY(0px);
+.aquazone-logo:hover {
+  transform: rotate(-3deg) scale(1.3) translateY(-2px);
   transition: .5s;
 }
-.pagename{
+
+.pagename {
   font-size: 2em;
   grid-column: 2 / 3;
   font-family: 'Oswald', sans-serif;
@@ -158,9 +143,7 @@ body{
   text-align: center;
 }
 
-
-
-.btnopen{
+.btnopen {
   border-radius: 100px;
   grid-column: 3 / 4;
   transition: 1s;
@@ -171,26 +154,20 @@ body{
   height: 60px;
   aspect-ratio: 1/1;
   border-radius: 100px;
-  border:none;
+  border: none;
   background-color: transparent;
   cursor: pointer;
-  position: absolute;
-  right: 40px;
 }
 
-button:active{
+button:active {
   font-size: 1em;
   transition: .5s;
 }
 
-
-
-
-
 #menu-background-pattern {
   background-image: radial-gradient(
-    rgba(255, 255, 255, 0.1) 5%, 
-    transparent 5%
+      rgba(255, 255, 255, 0.1) 5%, 
+      transparent 5%
   );
   background-position: 0% 0%;
   background-size: 12vmin 12vmin;
@@ -199,14 +176,11 @@ button:active{
   position: absolute;
   top: 0px;
   transition: opacity 800ms ease, 
-    background-size 800ms ease,
-    background-position 800ms ease;
+      background-size 800ms ease,
+      background-position 800ms ease;
   width: 100vw;
   z-index: -1;
 }
-
-
-
 
 .overlay[data-active-index="0"] > #menu-background-pattern {
   background-position: 0% -16%;
@@ -228,24 +202,6 @@ button:active{
   background-position: 0% -83%;
 }
 
-.overlay[data-active-index="5"] > #menu-background-pattern {
+.overlay[data-active-index="4"] > #menu-background-pattern {
   background-position: 0% -100%;
-}
-  
-
-
-.overlay-content:hover ~ #menu-background-pattern {
-  background-size: 11vmin 11vmin;
-  opacity: 0.5;
-  
-}
-
-
-@media screen and (max-height: 250px) {
-  .overlay {overflow-y: auto;}
-  .overlay a {font-size: 20px}
-  .overlay .btnclose {
-  font-size: 40px;
-  }
-
 }

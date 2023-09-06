@@ -1,13 +1,16 @@
 <?php
-    session_start();
+
+
+session_start();
+
 
 ?>
 
 
 <!-- <!DOCTYPE html>
 <html>
-    <head>
-        <title>header</title>
+    <head> -->
+        <!-- <title>header</title> -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="css/headercss.css">
@@ -22,24 +25,23 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Makasar&display=swap" rel="stylesheet">
 
     </head>
-    <body> -->
+    <body>
 
         <div id="myNav" class="overlay">
             <button class="btnclose" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></button>
-    
             <div class="overlay-content">
-                <a href="#" class="links">Home</a>
-                <a href="productsshow.php" class="links">Products</a>
+                <a href="homepage.php" class="links">Home</a>
+                <a href="productlist.php" class="links">Products</a>
+                <a href="mycart.php" class="links">My Cart</a>
                 <a href="#" class="links">Water Supply</a>
                 <a href="#" class="links">Borewell</a>
                 <a href="#" class="links">Service Men</a>
-                <a href="#" class="links">About</a>
             </div>
-
             <div class="account">
                 <?php
                     if(isset($_SESSION["username"])){
-                        echo "<a href='profile.php' class='login'><i class='fa-solid fa-user'></i></a>";
+                        echo "Welcome, " . $_SESSION['username'];
+                        echo "<a href='#' class='login'><i class='fa-solid fa-user'></i></a>";
                         echo "<a href='includes/logout-inc.php' class='login'><i class='fa-solid fa-right-from-bracket'></i></a>";
                     }
                     else{
@@ -50,27 +52,21 @@
 
             </div>
             <div id="menu-background-pattern"></div>
-
-
-
-
-
         </div>
-        <div class="contents">
-        
-            <div class="header">
-                <div class="aquazone-logo">
-                    <font color="#007aff">Aqua</font>
-                    <font color="#ffffff">Zone</font>
+            <div class="contents">
+            
+                <div class="header">
+                    <div class="aquazone-logo">
+                        <font color="#007aff">Aqua</font>
+                        <font color="#ffffff">Zone</font>
+                    </div>
+                    <div class="pagename">
+                    <i class="fa-solid fa-house"></i>
+                    </div>
+                    <button class="btnopen" onclick="openNav()"><i class="fa-solid fa-bars-staggered" ></i></button>
                 </div>
-                <div class="pagename">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <button class="btnopen" onclick="openNav()"><i class="fa-solid fa-bars-staggered" ></i></button>
             </div>
-        </div>
-
-        <script src="js/headerjs.js"></script>
-<!--         
-    </body>
+        <script src='js/headerjs.js'></script>
+        
+    <!-- </body>
 </html> -->

@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: -webkit-sticky;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.section {
+    height: 200vh; /* Each section is 200vh tall */
+}
+
+.section-1 {
+    background-color: #FF5733; /* Red */
+}
+
+.section-2 {
+    background-color: #33FF57; /* Green */
+    position: relative;
+    overflow: hidden;
+}
+
+.section-3 {
+    background-color: #5733FF; /* Blue */
+}
+
+.section-4 {
+    background-color: #FFFF33; /* Yellow */
+}
+
+.section-5 {
+    background-color: #33FFFF; /* Cyan */
+}
+
+.scrolling-text {
+    font-size: 24px;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}

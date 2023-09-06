@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+body{
+    margin: 0;
+}
+
+.footerforthebottompart{
+    overflow-y: hidden;
+}
+
+
+
+footer {
+    font-family: 'Poppins', sans-serif;
+    padding-block: 100px;
+    background-color: #1a1a1a;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+.container-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.link-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.linkcontainer {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 50px;
+    font-size: 20px;
+}
+
+.flex h4 {
+    font-size: 35px;
+    font-weight: 1000;
+}
+
+/* sub footer */
+
+.subfooter {
+    background-color: #141b24;
+    padding: 20px;
+    font-size: 15px;
+}
+
+.subfooter-container-1 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.flex a {
+    color: white;
+    text-decoration: none;
+}
+
+#logoofthewebsite {
+    position: relative;
+    width: 400px;
+    aspect-ratio: 1000 / 250;
+    user-select: none;
+}
+
+#logoofthewebsite > img {
+    width: 100%;
+    position: absolute;
+}

@@ -52,7 +52,7 @@ $result = display_product_table();
                     <td><?php echo $row['pPrice'];?></td>
                     <td><?php echo $row['pDescription'];?></td>
                     <td><?php echo $row['pSpecification'];?></td>
-                    <td><a href="includes/deleteproduct-inc.php? id=<?php echo $row['pid']; ?>" class="button btndelete">Delete</a></td>
+                    <td><a href="includes/deleteproduct-inc.php id=<?php echo $row['pid']; ?>" class="button btndelete">Delete</a></td>
                 </tr>
 
                 <?php

@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Poppins:wght@400;900&display=swap');
+
+html {
+    scroll-padding-top: 80px; /* Add padding to fit the header */
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.wholecontainer {
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+/* Rest of your CSS... */
+
+
+@keyframes rotate {
+from {
+    rotate: 0deg;
+}
+
+50% {
+    scale: 1 1.5;
+}
+
+to {
+    rotate: 360deg;
+}
+}
+
+  
+
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    overflow-y: scroll;
+    padding-top: 80px;
+
+}
+
+.section-1{
+    scroll-padding-top: 80px;
+    background-color: #352F44;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    overflow-y: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.section-2{
+    background-image: linear-gradient(to bottom right, #BB2525, #141E46);
+    height: 300vh;
+}
+.section-3{
+    background-color: #96C291;
+}
+.section-4{
+    background-color: #7091F5;
+}
+.section-5{
+    background-color: #183D3D;
+}
+.section-6{
+    background-color: #313866;
+}
+
+#logomain{
+    font-family: 'Merriweather', serif;
+    font-size: 50px;
+    color: white;
+    text-transform: uppercase;
+    padding: 0rem clamp(1rem, 2vw, 3rem);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+
+
+
+.loginpagelinkifnotloggedinlogin {
+    height: 100px;
+    width: 300px;
+    border-radius: 20px;
+    background-color: #0000006b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+    
+    /* Position the element within the .section-1 container */
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+}
+  
+    
+.loginpagelinkifnotloggedin a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.sectiontitle h1 {
+    font-size: 230px;
+    text-align: center;
+    margin: 150px 0 100px 0;
+    font-weight: 900;
+    color: transparent;
+    position: relative;
+    text-transform: uppercase;
+    opacity: .5;
+    top: 0;
+    left: 0;
+    line-height: 0;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    user-select: none;
+    position: relative; /* Add this line */
+}
+
+.sectiontitle h1::before,
+.sectiontitle h1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Adjust line height as needed */
+    background-color: rgb(255, 255, 255); /* Line color */
+}
+
+.sectiontitle h1::before {
+    top: -100px; /* Position above the text */
+}
+
+.sectiontitle h1::after {
+    bottom: -100px; /* Position below the text */
+}
+
+.navigationforpages {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigationforpages a {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 50px 0 0;
+    transition: 0.5s;
+}
+
+
+
+.navigationforpages a:hover {
+    color: #ffcc00;
+}
+
+
+.navigationforpages .fa-solid{
+    transform: rotate(-45deg) translate(5px, 5px);
+    transition: .5s;
+}
+
+.navigationforpages a:hover .fa-solid {
+    transform:  translate(20px, -0px);
+    color: #ffcc00;
+}
+
+.descriptionsection{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    position: relative;
+    right: 0;
+    margin-left: auto;
+    padding: 0 50px;
+    margin-top: 10px;
+}
+
+
+

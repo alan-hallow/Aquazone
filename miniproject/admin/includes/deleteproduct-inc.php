@@ -15,7 +15,7 @@
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
 
-            header("Location: ../productstable.php"); // Redirect back to the main page
+            header("Location: ../productstable-admin.php"); // Redirect back to the main page
             exit();
         } else {
             echo "Error executing query: " . mysqli_error($conn);

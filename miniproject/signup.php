@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -122,6 +123,6 @@
     
     
 
-    <!-- <script src='js/signupjs.js'></script> -->
+    <script src='js/signupjs.js'></script>
 </body>
 </html>

@@ -1,10 +1,9 @@
 <?php
-
+    session_start();
 require_once ('includes/dbh-inc.php');
 require_once ('includes/functions-inc.php');
 
 $result = display_product_table();
-
 
 
 ?>
@@ -15,9 +14,10 @@ $result = display_product_table();
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Products</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/productlistcss.css'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='css/header.css'> -->
 
     <script src="https://kit.fontawesome.com/89589cc083.js" crossorigin="anonymous"></script>
 
@@ -36,28 +36,35 @@ $result = display_product_table();
 </head>
 <body>
 
-    <!-- <div id="myNav" class="overlay">
+    <div id="myNav" class="overlay">
         <button class="btnclose" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></button>
 
         <div class="overlay-content">
-            <a href="#" class="links">Home</a>
-            <a href="#" class="links">Products</a>
+            <a href="homepage.php" class="links">Home</a>
+            <a href="productlist.php" class="links">Products</a>
             <a href="#" class="links">Water Supply</a>
             <a href="#" class="links">Borewell</a>
             <a href="#" class="links">Service men</a>
             <a href="#" class="links">About</a>
         </div>
+        <div class="account">
+                <?php
+                    if(isset($_SESSION["username"])){
+                        echo "<a href='#' class='login'><i class='fa-solid fa-user'></i></a>";
+                        echo "<a href='includes/logout-inc.php' class='login'><i class='fa-solid fa-right-from-bracket'></i></a>";
+                    }
+                    else{
+                        echo "<a href='login.php' class='login'>login</a>";
+                        echo "<a href='signup.php' class='login'>signup</a>";
+                    }
+                ?>
+
+            </div>
         <div id="menu-background-pattern"></div>
-    </div> -->
+    </div>
 
-    <?php 
 
-    
-    include "header.php";
-
-    
-    ?>
-    <div class="contents">
+    <div class="contentsofthefullproductslistpage">
     
         <div class="header">
             <div class="aquazone-logo">
@@ -74,16 +81,16 @@ $result = display_product_table();
         <div class="intro">
 
             <h1 id="intromain">The Products We Sell</h1>
-            <h3 id="introsub">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium consectetur aliquid itaque commodi dignissimos velit aliquam illo, maxime eos doloremque quae in? Mollitia cupiditate culpa dolorem, rem quisquam tempora cum.</h3>
+            <h3 id="introsub">At AquaZone, we take pride in offering a diverse range of high-quality products to meet your water-related needs. Our collection features a carefully curated selection of products designed to enhance your water experience. From innovative water supply solutions and reliable borewell equipment to stylish water accessories and skilled service professionals, our product lineup is designed to cater to a variety of preferences and requirements. </h3>
 
         </div>
 
-        <div class="container">
+        <div class="containerofthefullproductslistpage">
             <?php
        
 
             while ($row = mysqli_fetch_assoc($result)) {
-                echo "<div class=\"items\">";
+                echo "<a href=\"productdetails.php?product_id=".$row['pid']."\" class=\"items\">";
                 echo "<div class=\"image\">";
                 echo "<img src=\"images/".$row['image_one']."\" class=\"photo-on-display\">";
                 echo "<p class=\"pprice\">₹".$row['pPrice']."</p>";
@@ -91,13 +98,17 @@ $result = display_product_table();
                 echo "<div class=\"text\">";
                 echo "<p class=\"ptext\">".$row['pName']."</p>";
                 echo "</div>";
-                echo "</div>";
+                echo "</a>";
             }
             ?>
         </div>
+
     </div>
-      <script src='js/productlistjs.js'></script>  
-<!--       
-      <script src="js/headerjs.js"></script> -->
+<?php
+
+include "footer.php";
+?>
+    <script src='js/productlistjs.js'></script>  
+      
 </body>
 </html>
