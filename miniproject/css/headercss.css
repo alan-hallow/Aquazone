@@ -104,17 +104,17 @@ body {
 .header {
   overflow-y: hidden;
   display: grid;
+  place-items: center;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
   height: 80px;
   max-height: 80px;
   width: 100%;
   z-index: 10;
   background-color: #0f0f0faf;
   backdrop-filter: blur(10px);
-  place-items: center;
   top: 0;
   left: 0;
+  right: 0;
   position: fixed;
 }
 
@@ -126,7 +126,7 @@ body {
   transform: rotate(0deg) translateX(10px) translateY(0px);
   cursor: pointer;
   transition: .5s;
-  justify-self: start;
+  margin: 0 auto 0 50px;
 }
 
 .aquazone-logo:hover {
@@ -149,7 +149,7 @@ body {
   transition: 1s;
   font-size: 2em;
   color: white;
-  justify-self: end;
+  margin: 0 50px 0 auto;
   text-align: center;
   height: 60px;
   aspect-ratio: 1/1;

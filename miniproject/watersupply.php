@@ -31,21 +31,22 @@ include "header.php";
 
 
 
-        <form action="includes/watersupply-inc.php" method="POST">
+        <form action="includes/watersupply-inc.php" method="post" onsubmit="return confirm('Are you sure you want to place this order?');">
+    <!-- Your form content here -->
             <div class="watersupplybooknowcards">
                 <div class="panel panel-1 active">
                     <h3>Discover the purest hydration for your home with our premium water supply service. From refreshing sips to daily chores, our household water, available in various quantities, ensures that your family stays hydrated and healthy. Quench your thirst with the best water for your loved ones.</h3>
                     <h1 class="watersupplybooknowcard">500 Litre</h1>
 
 
-                    <button type="submit" name="submit" class="watersupplyordernowbutton" value="500">Order Now</button>
+                    <button type="submit" name="submit" class="watersupplyordernowbutton" value="500" id="order-button">Order Now</button>
                 </div>
                 <div class="panel panel-2">
                     <h3>Elevate your apartment living with our pristine water supply solutions. Tailored to fit your space and needs, our apartment-friendly water options deliver quality hydration to your doorstep. Enjoy the convenience of clean, crisp water in every corner of your cozy abode.</h3>
                     <h1 class="watersupplybooknowcard">1000 Litre</h1>
 
 
-                    <button type="submit" name="submit" class="watersupplyordernowbutton" value="1000">Order Now</button>
+                    <button type="submit" name="submit" class="watersupplyordernowbutton" value="1000" id="order-button">Order Now</button>
 
                 </div>
                 <div class="panel panel-3">
@@ -53,7 +54,7 @@ include "header.php";
                     <h1 class="watersupplybooknowcard">5000 Litre</h1>
 
 
-                    <button type="submit" name="submit" class="watersupplyordernowbutton" value="5000">Order Now</button>
+                    <button type="submit" name="submit" class="watersupplyordernowbutton" value="5000" id="order-button">Order Now</button>
 
                 </div>
             </div>

@@ -33,9 +33,18 @@
             </div>
 
         </section>
+
+
+
+
         <section class="section section-2">
 
         </section>
+
+
+
+
+
         <section class="section section-3">
             <div class="navigationforpages navigation-1">
                 <a href="productlist.php">go to page<i class="fa-solid fa-arrow-right-long"></i></a>
@@ -47,37 +56,71 @@
                 <p>We offer a diverse range of high-quality products designed to meet your specific needs. From cutting-edge technology to stylish accessories, our products combine innovation and functionality to enhance your everyday life.</p>
             </div>
         </section>
+
+
+
+
         <section class="section section-4">
-            <div class="navigationforpages navigation-1">
-                <a href="puritychecking.php">go to page<i class="fa-solid fa-arrow-right-long"></i></a>
+            <div class="navigationforpages navigation-2">
+                <a href="watersupply.php">go to page<i class="fa-solid fa-arrow-right-long"></i></a>
             </div>
             <div class="sectiontitle twotitle">
-                <h1>Purity</h1>
+                <h1>Supply</h1>
             </div>
             <div class="descriptionsection descriptionsection-2">
-                <p>We offer a comprehensive water purity checking service. Our expert team utilizes advanced techniques to analyze water quality, identifying and addressing contaminants to ensure clean and safe water for your peace of mind and well-being.</p>
+                <p>AquaZone delivers pristine water supply solutions tailored to your needs. From households to businesses, enjoy reliable and refreshing hydration with our premium water services.</p>
             </div>
         </section>
+
+
+
+
+
         <section class="section section-5">
-            <div class="navigationforpages navigation-1">
+            <div class="navigationforpages navigation-3">
                 <a href="#">go to page<i class="fa-solid fa-arrow-right-long"></i></a>
             </div>
             <div class="sectiontitle threetitle">
                 <h1>purify</h1>
             </div>
-            <div class="descriptionsection descriptionsection-2">
+            <div class="descriptionsection descriptionsection-3">
                 <p>Our water purification service employs cutting-edge technology to eliminate impurities, providing you with crystal-clear and safe drinking water. We prioritize environmental responsibility, offering sustainable solutions that guarantee the highest purity standards while reducing ecological impact.</p>
         </section>
+
+
+
+
+
         <section class="section section-6">
-            <div class="navigationforpages navigation-1">
+            <div class="navigationforpages navigation-4">
                 <a href="#">go to page<i class="fa-solid fa-arrow-right-long"></i></a>
             </div>
             <div class="sectiontitle fourtitle">
                 <h1>Services</h1>
             </div>
-            <div class="descriptionsection descriptionsection-2">
+            <div class="descriptionsection descriptionsection-4">
                 <p>A service man is a dedicated professional who provides essential assistance, maintenance, or repairs to various systems or equipment. Their expertise ensures smooth operations, resolves issues promptly, and enhances customer satisfaction through skillful, reliable service.</p>
         </section>
+
+
+
+
+
+        <section class="section section-7">
+            <div class="navigationforpages navigation-5">
+                <a href="puritychecking.php">go to page<i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+            <div class="sectiontitle fivetitle">
+                <h1>Purity</h1>
+            </div>
+            <div class="descriptionsection descriptionsection-5">
+                <p>We offer a comprehensive water purity checking service. Our expert team utilizes advanced techniques to analyze water quality, identifying and addressing contaminants to ensure clean and safe water for your peace of mind and well-being.</p>
+            </div>
+        </section>
+
+
+
+
 
     <?php
     include "homepagefooter.php";
